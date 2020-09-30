@@ -1,0 +1,42 @@
+/*this makes the scrolling smoother back to top for entire page*/
+html {
+    scroll-behavior: smooth;
+}
+/*paste font rulings from fonts.google.com*/
+.navbar-brand {
+    font-family: 'Dancing Script', cursive;
+}
+
+.display-4 {
+    font-family: 'Dancing Script', cursive;
+}
+
+.navbar {
+background-color: rgb(15, 15, 15);
+border-bottom: 2px solid  #ffc107;
+}
+
+
+.jumbotron {
+background-color: rgb(26,26,26);
+color: white;
+
+}
+
+.icons{
+    font-size: 3rem;
+}
+
+/* but to change icon color you need to pick the 'a' tags like so, also to create margins */
+.icons  a{
+    color: gray;
+    margin: 1rem;
+}
+/*when hovering on icons, they are underlined. to remove that use text-decoration in css*/
+/*change the color of icon when user hovers to yellow*/
+.icons  a:hover{
+text-decoration: none;
+color: #ffc107;
+transition: transform 0.9s; /*duration of rotation*/
+transform: rotate(-360deg); /*-360 to rotate cc*/
+}

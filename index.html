@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bootstrap Image Gallery</title> <!-- enter title of page -->
+    <!--google fonts cdn from fonts.google.com-->
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap" rel="stylesheet">
+    <!-- AOS cdn -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- bootstrap cdn -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"> 
+    <!-- must link to css folder also because we will edit via css also-->
+    <!--local css-->
+    <!--NOTE: make sure to paste the cdn's above the local files-->
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body class="bg-dark"> <!-- add class="bg-dark" for bootsrap dark color in background-->
+    <!-- copy bootstrap navbar and delete undesired icons -->
+    <nav class="navbar navbar-expand-lg navbar-dark"> <!-- navbar-dark defaults image galerie as white and home/contact as grey, add black color via css for navbar bg because default is grey-->
+        <a class="navbar-brand" href="#"><i class="fas fa-camera-retro text-warning"></i> Image Galerie</a> <!-- enter name of navbar (here its image galerie) and paste camera icon from fontawesome(with text-warning for yellow color) before 'image galerie' text -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto"> <!-- ml-auto sets margins to right -->
+           
+            <li class="nav-item">
+              <a class="nav-link" href="#">Home</a> <!--"#" stays the same because we're at top of homepage already-->
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a> <!--add 'contact' after '#', then create an ID in the bottom jumbotron by the name 'contact' to link them-->
+            </li>
+           
+          </ul>
+        </div>
+      </nav> 
+      <!-- copy and paste jumbotron Js after navbar code-->
+      <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+          <h1 class="display-4">Image Galerie</h1>
+          <p class="lead text-warning font-italic">T'is the furry life...<i class="fas fa-cat"></i></i></p>
+        </div>
+      </div>
+
+      <!-- create a new div with class gallery for all photos-->
+      <!-- enclose each set of three photos in a row div with margin 4-->
+      <!-- col=column, m=margin, mr(margin right), ml(left), mb,mt(bottom,top), mp(padding)-->
+      <!--goto AOS animate on scroll library website to find these animations, but dont forget to copy and paste the CSS from the site-->
+      <div class="gallery">
+          <div class="images m-4 row" data-aos="fade-right" data-aos-easing="ease-in-sine" data-aos-duration="900">
+          <img class="col-md-4 mt-4" src="file:///C:/Users/Isra%20Salah/Downloads/filename.jpg"> <!--each row has 3 columns-->
+          <img class="col-md-4 mt-4" src="file:///C:/Users/Isra%20Salah/Downloads/kallidoll.jpg">
+          <img class="col-md-4 mt-4" src="file:///C:/Users/Isra%20Salah/Downloads/liljj.jpg">
+        </div>
+        <div class="images m-4 row" data-aos="fade-right" data-aos-easing="ease-in-sine" data-aos-duration="900">
+            <!-- col-md-4 means that each row consists of 12 elements, when reaching medium breakimg point(denoted md) make each photo have 4 elements-->
+            <!-- col-md-4 makes the page RESPONSIVE when you make it smaller-->
+            <!-- when making the page smaller, medium breaking point is right before each image displays on it's own-->
+            <!-- after medium breaking point, each image will have 12 elements, this is responsiveness-->
+            <!-- there is md(medium) lg(large) and sm(small)-->
+            <img class="col-md-4 mt-4" src="file:///C:/Users/Isra%20Salah/Downloads/111.jpg">
+            <img class="col-md-4 mt-4" src="file:///C:/Users/Isra%20Salah/Downloads/222.jpg">
+            <img class="col-md-4 mt-4" src="file:///C:/Users/Isra%20Salah/Downloads/333.jpg">
+          </div>/
+          <div class="images m-4 row" data-aos="fade-right" data-aos-easing="ease-in-sine" data-aos-duration="900">
+            <img class="col-md-4 mt-4" src="file:///C:/Users/Isra%20Salah/Downloads/444.jpg">
+            <img class="col-md-4 mt-4" src="file:///C:/Users/Isra%20Salah/Downloads/666.jpg">
+            <img class="col-md-4 mt-4" src="file:///C:/Users/Isra%20Salah/Downloads/555.jpg">
+          </div>
+          <div class="images m-4 row" data-aos="fade-right" data-aos-easing="ease-in-sine" data-aos-duration="900">
+            <img class="col-md-4 mt-4" src="file:///C:/Users/Isra%20Salah/Downloads/999.jpg">
+            <img class="col-md-4 mt-4" src="file:///C:/Users/Isra%20Salah/Downloads/777.jpg">
+            <img class="col-md-4 mt-4" src="file:///C:/Users/Isra%20Salah/Downloads/888.jpg">
+          </div>
+      </div>
+      <!-- copy and paste another jumbotron Js after gallery code, for 'contact us' portion of the page-->
+      <div class="jumbotron jumbotron-fluid m-0" id="contact"> <!--make sure to add m-0 to this jumbotron to remove the margin from the tron and botton of the page, and create id name to refer to this jumbotron when user hits contact from navbar-->
+        <div class="container text-center "> <!--add text-center here-->
+          <h1 class="display-4">Contact Us</h1>
+          <!--copy logos from fontawesome and change from 'i' tag to 'a' tag(anchor tag) for clickability-->
+          <!--add href to send user to link-->
+          <div class="icons"> <!--wrap in div so you can edit the font size of all three icons via CSS using class name-->
+          <a href="https://www.facebook.com/" class="fab fa-facebook"></a>
+          <a href="https://www.instagram.com" class="fab fa-instagram"></a>
+          <a href="https://www.linkedin.com" class="fab fa-linkedin"></a>
+        </div>
+        <!--create a clickable large yellow button that says back to top, then add the arrow, use'#' to command back to top-->
+        <a href="#" class="btn btn-lg bg-warning">Back to Top <i class="fas fa-arrow-up"></i></a>
+      </div>
+
+<!--paste AOS JS BEFORE initializing AOS-->    
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<!--paste AOS initialize script-->
+<script>
+ AOS.init();
+</script>      
+<!-- fontawesome JS -->     
+<script src="https://kit.fontawesome.com/e00620966f.js" crossorigin="anonymous"></script>
+<!-- bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+</body>
+</html>
